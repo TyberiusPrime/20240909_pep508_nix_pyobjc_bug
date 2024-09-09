@@ -1,0 +1,31 @@
+warning: Git tree '/amy/ffs/e/20240909_FFinkernagel_uv2nix/builds/hammer_build_pyobjc_10.3.1/build' is dirty
+error:
+       … while evaluating the attribute 'pkgs.app'
+
+         at /nix/store/wzx1ba5hqqfa23vfrvqmfmkpj25p37mr-source/pkgs/development/interpreters/python/passthrufun.nix:87:5:
+
+           86|     withPackages = import ./with-packages.nix { inherit buildEnv pythonPackages;};
+           87|     pkgs = pythonPackages;
+             |     ^
+           88|     interpreter = "${self}/bin/${executable}";
+
+       … while calling the 'mapAttrs' builtin
+
+         at /nix/store/wzx1ba5hqqfa23vfrvqmfmkpj25p37mr-source/pkgs/development/interpreters/python/passthrufun.nix:31:8:
+
+           30|           value;
+           31|     in lib.mapAttrs func items;
+             |        ^
+           32|   in ensurePythonModules (callPackage
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: attribute '">="' missing
+
+       at /nix/store/qv2fvy0623fh8nismf1ljp6i6zlz4ka7-source/lib/pep508.nix:685:15:
+
+          684|             else if value.lhs.type == "variable" || value.lhs.value == "extra" then
+          685|               extraComparators.${value.op}
+             |               ^
+          686|             # Simple equality
+       Did you mean one of != or ==?

@@ -1,0 +1,9 @@
+
+[project]
+name = "app"
+version = "0.1.0"
+description = "Learn to build pyobjc"
+requires-python = "~=3.12"
+dependencies = [
+    "pyobjc==10.3.1",
+]
